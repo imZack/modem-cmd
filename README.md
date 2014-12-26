@@ -33,7 +33,7 @@ from modemcmd import ModemcmdException
 from modemcmd import ModemcmdTimeoutException
 
 try:
-    modemcmd('/dev/ttyUSB2', 'AT+CSQ', 10)
+    result = modemcmd('/dev/ttyUSB2', 'AT+CSQ', 10)
 except ModemcmdTimeoutException as e:
     print e
 except ModemcmdException as e:
