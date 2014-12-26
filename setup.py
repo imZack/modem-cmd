@@ -22,7 +22,22 @@ setup(name='modem-cmd',
       download_url=
       'https://github.com/imZack/modem-cmd/archive/{0}.tar.gz'.format(VERSION),
       keywords=['modem', 'at commands', 'serial'],
-      modules=['modem_cmd'],
-      scripts=['modem_cmd.py'],
-      install_requires=requires
+      py_modules=['modemcmd'],
+      scripts=['modemcmd.py'],
+      install_requires=requires,
+      classifiers=[
+          'Environment :: Console',
+          'Intended Audience :: Developers',
+          'Intended Audience :: Telecommunications Industry',
+          'Classifier: Development Status :: 3 - Alpha',
+          'Classifier: License :: OSI Approved :: MIT License',
+          'Programming Language :: Python :: 2.6',
+          'Programming Language :: Python :: 2.7',
+          'Topic :: Communications :: Telephony',
+          'Topic :: Software Development :: Libraries :: Python Modules',
+          'Topic :: System :: Hardware',
+          'Topic :: Terminals :: Serial',
+          'Topic :: Utilities',
+          'Operating System :: OS Independent',
+      ]
       )
