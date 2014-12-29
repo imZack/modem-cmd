@@ -1,5 +1,8 @@
-modem-cmd (Python)
+modem-cmd (Python) 
 ==================
+.. image:: https://pypip.in/version/modem-cmd/badge.svg
+    :target: https://pypi.python.org/pypi/modem-cmd/
+    :alt: Latest Version
 
 Send arbitrary AT commands to your modem
 
