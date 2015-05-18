@@ -21,11 +21,10 @@ class ModemcmdException(Exception):
         self.msg = msg
 
 
-def modemcmd(port, cmd, timeout=20):
+def modemcmd(port, cmd, timeout=0.3):
     try:
         serial = Serial(port=port,
-                        timeout=int(timeout),
-                        writeTimeout=int(timeout))
+                        timeout=float(timeout))
     except SerialException as e:
         raise ModemcmdException(e)
 
@@ -35,19 +34,11 @@ def modemcmd(port, cmd, timeout=20):
     except SerialTimeoutException:
         raise ModemcmdTimeoutException('Write timeout')
 
-    line = serial.readline()
-    if line == '':  # timeout
+    lines = serial.readlines()
+    if lines == '':  # timeout
         raise ModemcmdTimeoutException('Read timeout')
 
-    # Except echo input command
-    if cmd != line[:-2]:  # trim \r\n
-        return 'modemcmd ERROR'
-
-    line = serial.readline()
-    if line == '':  # timeout
-        raise ModemcmdTimeoutException('Read timeout')
-
-    return line[:-1]
+    return "".join(lines)
 
 
 def main(argv):
