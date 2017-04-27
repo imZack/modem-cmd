@@ -1,4 +1,4 @@
-modem-cmd (Python) 
+modem-cmd (Python)
 ==================
 .. image:: https://pypip.in/version/modem-cmd/badge.svg
     :target: https://pypi.python.org/pypi/modem-cmd/
@@ -6,7 +6,7 @@ modem-cmd (Python)
 
 Send arbitrary AT commands to your modem
 
-**Usage: python -m modemcmd MODEM\_DEVICE COMMAND [TIMEOUT]**
+**Usage: modem-cmd MODEM\_DEVICE COMMAND [TIMEOUT]**
 
 ::
 
@@ -22,14 +22,14 @@ Command line
 
 ::
 
-    $ python -m modemcmd /dev/ttyUSB2 AT+CSQ
+    $ modem-cmd /dev/ttyUSB2 AT+CSQ
     +CSQ: 12,99
 
 **Get Operator**
 
 ::
 
-    $ python -m modemcmd /dev/ttyUSB2 AT+COPS?
+    $ modem-cmd /dev/ttyUSB2 AT+COPS?
     +COPS: 0,0,"Chunghwa Telecom",2
 
 API
