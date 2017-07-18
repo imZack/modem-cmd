@@ -51,4 +51,4 @@ API
 License
 -------
 
-MIT: http://yulun.mit-license.org
+GPLv3+
