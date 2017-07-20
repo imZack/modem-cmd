@@ -2,7 +2,7 @@
 
 """ modem-cmd installation script """
 
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 
 try:
     from setuptools import setup
